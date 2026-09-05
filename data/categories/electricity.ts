@@ -1,0 +1,82 @@
+import { Sparkles, Zap, BatteryCharging, CircuitBoard, Battery } from "lucide-react";
+import type { Category } from "@/types/unit";
+
+export const electricityCategories: Category[] = [
+  {
+    id: "charge",
+    name: "بار الکتریکی",
+    nameEn: "electric charge",
+    symbol: "Q",
+    icon: Sparkles,
+    baseUnitId: "c",
+    defaultUnits: ["c", "mc"],
+    units: [
+      { id: "c", name: "کولن", nameEn: "coulomb", symbol: "C", factorToBase: 1 },
+      { id: "mc", name: "میلی‌کولن", nameEn: "millicoulomb", symbol: "mC", factorToBase: 0.001 },
+      { id: "uc", name: "میکروکولن", nameEn: "microcoulomb", symbol: "μC", factorToBase: 1e-6 },
+      { id: "ah", name: "آمپرساعت", nameEn: "amp-hour", symbol: "Ah", factorToBase: 3600 },
+      { id: "e", name: "بار بنیادی", nameEn: "elementary charge", symbol: "e", factorToBase: 1.602176634e-19 },
+    ],
+  },
+  {
+    id: "current",
+    name: "جریان الکتریکی",
+    nameEn: "electric current",
+    symbol: "I",
+    icon: Zap,
+    baseUnitId: "a",
+    defaultUnits: ["a", "ma"],
+    units: [
+      { id: "a", name: "آمپر", nameEn: "ampere", symbol: "A", factorToBase: 1 },
+      { id: "ma", name: "میلی‌آمپر", nameEn: "milliampere", symbol: "mA", factorToBase: 0.001 },
+      { id: "ua", name: "میکروآمپر", nameEn: "microampere", symbol: "μA", factorToBase: 1e-6 },
+      { id: "ka", name: "کیلوآمپر", nameEn: "kiloampere", symbol: "kA", factorToBase: 1000 },
+    ],
+  },
+  {
+    id: "voltage",
+    name: "ولتاژ",
+    nameEn: "voltage",
+    symbol: "V",
+    icon: BatteryCharging,
+    baseUnitId: "v",
+    defaultUnits: ["v", "kv"],
+    units: [
+      { id: "mv", name: "میلی‌ولت", nameEn: "millivolt", symbol: "mV", factorToBase: 0.001 },
+      { id: "v", name: "ولت", nameEn: "volt", symbol: "V", factorToBase: 1 },
+      { id: "kv", name: "کیلوولت", nameEn: "kilovolt", symbol: "kV", factorToBase: 1000 },
+      { id: "mgv", name: "مگاولت", nameEn: "megavolt", symbol: "MV", factorToBase: 1e6 },
+    ],
+  },
+  {
+    id: "resistance",
+    name: "مقاومت الکتریکی",
+    nameEn: "electrical resistance",
+    symbol: "R",
+    icon: CircuitBoard,
+    baseUnitId: "ohm",
+    defaultUnits: ["ohm", "kohm"],
+    units: [
+      { id: "mohm", name: "میلی‌اهم", nameEn: "milliohm", symbol: "mΩ", factorToBase: 0.001 },
+      { id: "ohm", name: "اهم", nameEn: "ohm", symbol: "Ω", factorToBase: 1 },
+      { id: "kohm", name: "کیلواهم", nameEn: "kiloohm", symbol: "kΩ", factorToBase: 1000 },
+      { id: "mgohm", name: "مگااهم", nameEn: "megaohm", symbol: "MΩ", factorToBase: 1e6 },
+    ],
+  },
+  {
+    id: "capacitance",
+    name: "خازن (ظرفیت خازنی)",
+    nameEn: "capacitance",
+    symbol: "C",
+    icon: Battery,
+    baseUnitId: "f",
+    defaultUnits: ["uf", "nf"],
+    units: [
+      { id: "f", name: "فاراد", nameEn: "farad", symbol: "F", factorToBase: 1 },
+      { id: "mf", name: "میلی‌فاراد", nameEn: "millifarad", symbol: "mF", factorToBase: 0.001 },
+      { id: "uf", name: "میکروفاراد", nameEn: "microfarad", symbol: "μF", factorToBase: 1e-6 },
+      { id: "nf", name: "نانوفاراد", nameEn: "nanofarad", symbol: "nF", factorToBase: 1e-9 },
+      { id: "pf", name: "پیکوفاراد", nameEn: "picofarad", symbol: "pF", factorToBase: 1e-12 },
+    ],
+  },
+];
